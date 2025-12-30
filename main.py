@@ -23,6 +23,9 @@ options = webdriver.ChromeOptions()
 options.add_argument('--start-maximized')
 
 driver = webdriver.Chrome(options=options)
+
+driver.get('https://www.google.com')
+time.sleep(0.3)
 driver.get('https://userinyerface.com/game.html')
 
 try:
@@ -65,11 +68,11 @@ try:
     # 點擊 Upload 按鈕
     upload_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'avatar-and-interests__upload-button')))
     upload_button.click()
-    time.sleep(0.5)
+    time.sleep(0.3)
 
     # 強制切換輸入法為英文
     switch_to_english()
-    time.sleep(0.5)
+    time.sleep(0.3)
 
     # 生成圖片+自動輸入圖片路徑
     current_dir = Path(__file__).resolve().parent
@@ -80,7 +83,7 @@ try:
     time.sleep(0.3)
 
     pyautogui.write(str(img_path))
-    time.sleep(0.5)
+    time.sleep(0.3)
     pyautogui.press('enter')
 
     # 從最後一個 Checkbox 開始點擊 然後點擊原本的 1~3
@@ -147,6 +150,7 @@ try:
     male_toggle.click()
 
     # 按下 Next 按鈕
+    time.sleep(0.3)
     next_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[contains(@class, "button button--stroked button--white") and text()="Next"]')))
     next_button.click()
 
@@ -172,6 +176,6 @@ finally:
     if img_path.exists():
         img_path.unlink()
 
-time.sleep(0.5)
+time.sleep(0.3)
 keyboard.wait('enter')
 driver.quit()
