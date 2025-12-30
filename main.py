@@ -94,6 +94,7 @@ try:
         driver.execute_script('arguments[0].click();', checkboxes[i])
 
     # 勾選 Checkbox 之後才點擊 Next
+    time.sleep(0.3)
     next_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[contains(@class, "button--stroked") and text()="Next"]')))
     next_button.click()
 
@@ -150,7 +151,6 @@ try:
     male_toggle.click()
 
     # 按下 Next 按鈕
-    time.sleep(0.3)
     next_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[contains(@class, "button button--stroked button--white") and text()="Next"]')))
     next_button.click()
 
