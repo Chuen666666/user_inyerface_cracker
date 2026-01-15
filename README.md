@@ -5,6 +5,7 @@
 - Python（3.9~3.12）
 - Google Chrome
 - Windows 10/11（不支援 Docker/WSL/Linux/macOS）
+- （可選）Ruff
 
 > 執行程式時，視窗焦點需在自動執行的 Chrome 上，建議執行完程式後就不要點擊滑鼠，直至程式結束
 
