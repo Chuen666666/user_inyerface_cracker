@@ -1,3 +1,5 @@
-keyboard
-pyautogui
-selenium
+keyboard>=0.13.5
+pyautogui>=0.9.54
+Pillow>=10.0.0
+selenium>=4.15.2
+pre-commit>=4.5.1
